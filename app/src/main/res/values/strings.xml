@@ -2,8 +2,19 @@
     <string name="app_name">NativePlantIdentifier</string>
 
     <string name="leaf_type">Leaf Type</string>
+    <string name="leaf_subtype">Leaf Subtype</string>
+    <string name="leaf_lobed_type">Leaf Lobed Type</string>
+
     <string name="leaf_simple">Simple</string>
+    <string name="leaf_unlobed">Unlobed</string>
+    <string name="leaf_lobed">Lobed</string>
+
     <string name="leaf_compound">Compound</string>
+    <string name="leaf_digitate">Digitate</string>
+    <string name="leaf_pinnate">Pinnate</string>
+    <string name="leaf_pinnately_trifoliate">Pinnately Trifoliate</string>
+    <string name="leaf_palmately_trifoliate">Palmately Trifoliate</string>
+    <string name="leaf_bipinnate">Bippinate</string>
 
     <string name="search">Search</string>
 </resources>

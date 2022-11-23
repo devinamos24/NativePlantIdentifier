@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NativePlantIdentifier</string>
+
+    <string name="leaf_type">Leaf Type</string>
+    <string name="leaf_simple">Simple</string>
+    <string name="leaf_compound">Compound</string>
+
+    <string name="search">Search</string>
+</resources>

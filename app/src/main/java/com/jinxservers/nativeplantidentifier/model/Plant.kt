@@ -15,23 +15,17 @@ data class Plant(
                 // Simple cannot exist with Compound
                 Simple -> {
                     if (properties.contains(Simple)) {
-//                        properties - Simple.also {
-//                            properties - PlantPropertyCategory.LEAF_SUBTYPE_SIMPLE.properties.toSet()
-//                        }
                         properties - Simple - PlantPropertyCategory.LEAF_SUBTYPE_SIMPLE.properties.toSet()
                     } else {
-                        properties + Simple - Compound
+                        properties + Simple - Compound - PlantPropertyCategory.LEAF_SUBTYPE_COMPOUND.properties.toSet()
                     }
                 }
                 // Compound cannot exist with Simple
                 Compound -> {
                     if (properties.contains(Compound)) {
-//                        properties - Compound.also {
-//                            properties - PlantPropertyCategory.LEAF_SUBTYPE_COMPOUND.properties.toSet()
-//                        }
                         properties - Compound - PlantPropertyCategory.LEAF_SUBTYPE_COMPOUND.properties.toSet()
                     } else {
-                        properties + Compound - Simple
+                        properties + Compound - Simple - PlantPropertyCategory.LEAF_SUBTYPE_SIMPLE.properties.toSet()
                     }
                 }
                 Unlobed -> {

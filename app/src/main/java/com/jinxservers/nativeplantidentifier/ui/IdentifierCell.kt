@@ -1,6 +1,7 @@
 package com.jinxservers.nativeplantidentifier.ui
 
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -77,13 +78,14 @@ private fun IdentifierButton(
 ) {
     Button(
         onClick = { onClickButton() },
-        modifier = modifier.padding(horizontal = 2.dp, vertical = 4.dp)
-    ) {
-        var text = stringResource(id = property.text)
-        if (plant.properties.contains(property)) {
-            text += " is on Plant!"
+        modifier = modifier.padding(horizontal = 2.dp, vertical = 4.dp),
+        border = if (plant.properties.contains(property)) {
+            BorderStroke(4.dp, Color.Black)
+        } else {
+            BorderStroke(4.dp, Color.White)
         }
-        Text(text = text)
+    ) {
+        Text(text = stringResource(id = property.text))
     }
 }
 

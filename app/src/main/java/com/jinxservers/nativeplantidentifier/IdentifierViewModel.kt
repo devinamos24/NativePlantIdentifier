@@ -34,9 +34,9 @@ class IdentifierViewModel: ViewModel() {
         if (plant.properties.isNotEmpty()) {
             queryEnd = plant.properties.fold(" WHERE ") { sum, property ->
                 if (property != plant.properties.last()) {
-                    sum + "${property.dataBaseEntry} = TRUE AND "
+                    sum + "${property.dataBaseEntry} = 1 AND "
                 } else {
-                    sum + "${property.dataBaseEntry} = TRUE"
+                    sum + "${property.dataBaseEntry} = 1"
                 }
             }
         }

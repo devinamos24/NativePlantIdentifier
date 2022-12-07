@@ -4,17 +4,28 @@
     <string name="leaf_type">Leaf Type</string>
     <string name="leaf_subtype">Leaf Subtype</string>
     <string name="leaf_lobed_type">Leaf Lobed Type</string>
+    <string name="leaf_petiole_type">Leaf Petiole Type</string>
 
     <string name="leaf_simple">Simple</string>
-    <string name="leaf_unlobed">Unlobed</string>
-    <string name="leaf_lobed">Lobed</string>
+    <string name="leaf_subtype_simple_unlobed">Unlobed</string>
+    <string name="leaf_subtype_simple_lobed">Lobed</string>
+
+    <string name="leaf_lobed_palmate">Palmate</string>
+    <string name="leaf_lobed_pinnate">Pinnate</string>
 
     <string name="leaf_compound">Compound</string>
-    <string name="leaf_digitate">Digitate</string>
-    <string name="leaf_pinnate">Pinnate</string>
-    <string name="leaf_pinnately_trifoliate">Pinnately Trifoliate</string>
-    <string name="leaf_palmately_trifoliate">Palmately Trifoliate</string>
-    <string name="leaf_bipinnate">Bippinate</string>
+    <string name="leaf_subtype_compound_digitate">Digitate</string>
+    <string name="leaf_subtype_compound_pinnate">Pinnate</string>
+    <string name="leaf_subtype_compound_pinnately_trifoliate">Pinnately Trifoliate</string>
+    <string name="leaf_subtype_compound_palmately_trifoliate">Palmately Trifoliate</string>
+    <string name="leaf_subtype_compound_bipinnate">Bippinate</string>
+
+    <string name="leaf_petiole_petiolate">Petiolate</string>
+    <string name="leaf_petiole_sessile">Sessile</string>
+    <string name="leaf_petiole_subpetiolate">Subpetiolate</string>
+    <string name="leaf_petiole_clasping">Clasping</string>
+    <string name="leaf_petiole_exstipulate">Exstipulate</string>
+    <string name="leaf_petiole_stipulate">Stipulate</string>
 
     <string name="search">Search</string>
 </resources>

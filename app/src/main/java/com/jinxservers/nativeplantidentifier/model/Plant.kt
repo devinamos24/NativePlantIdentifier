@@ -15,9 +15,15 @@ data class Plant(
                 // Simple cannot exist with Compound
                 Simple -> {
                     if (properties.contains(Simple)) {
-                        properties - Simple - PlantPropertyCategory.LEAF_SUBTYPE_SIMPLE.properties.toSet()
+                        properties -
+                                Simple -
+                                PlantPropertyCategory.LEAF_SUBTYPE_SIMPLE.properties.toSet() -
+                                PlantPropertyCategory.LEAF_SIMPLE_LOBED.properties.toSet()
                     } else {
-                        properties + Simple - Compound - PlantPropertyCategory.LEAF_SUBTYPE_COMPOUND.properties.toSet()
+                        properties +
+                                Simple -
+                                Compound -
+                                PlantPropertyCategory.LEAF_SUBTYPE_COMPOUND.properties.toSet()
                     }
                 }
                 // Compound cannot exist with Simple
@@ -28,18 +34,43 @@ data class Plant(
                         properties + Compound - Simple - PlantPropertyCategory.LEAF_SUBTYPE_SIMPLE.properties.toSet()
                     }
                 }
-                Unlobed -> {
-                    if (properties.contains(Unlobed)) {
-                        properties - Unlobed
+                SimpleUnlobed -> {
+                    if (properties.contains(SimpleUnlobed)) {
+                        properties - SimpleUnlobed
                     } else {
-                        properties + Unlobed - Lobed
+                        properties +
+                                SimpleUnlobed -
+                                SimpleLobed -
+                                PlantPropertyCategory.LEAF_SIMPLE_LOBED.properties.toSet()
                     }
                 }
-                Lobed -> {
-                    if (properties.contains(Lobed)) {
-                        properties - Lobed
+                SimpleLobed -> {
+                    if (properties.contains(SimpleLobed)) {
+                        properties -
+                                SimpleLobed -
+                                PlantPropertyCategory.LEAF_SIMPLE_LOBED.properties.toSet()
                     } else {
-                        properties + Lobed - Unlobed
+                        properties +
+                                SimpleLobed -
+                                SimpleUnlobed
+                    }
+                }
+                LobedPinnate -> {
+                    if (properties.contains(LobedPinnate)) {
+                        properties - LobedPinnate
+                    } else {
+                        properties +
+                                LobedPinnate -
+                                LobedPalmate
+                    }
+                }
+                LobedPalmate -> {
+                    if (properties.contains(LobedPalmate)) {
+                        properties - LobedPalmate
+                    } else {
+                        properties +
+                                LobedPalmate -
+                                LobedPinnate
                     }
                 }
                 else -> {
